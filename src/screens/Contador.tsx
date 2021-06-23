@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 export const Contador = () => {
   const [contador, setContador] = useState(0);
@@ -7,22 +7,22 @@ export const Contador = () => {
   return (
     <View style={style.container}>
       <Text style={style.text}>Contador: {contador}</Text>
-      <Button
+      <TouchableOpacity
         onPress={() => {
           setContador(contador + 1);
         }}
-        title="+ 1"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
-      />
-      <Button
+        style={style.button}
+      >
+        <Text>+ 1</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
         onPress={() => {
           setContador(contador - 1);
         }}
-        title="- 1"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
-      />
+        style={style.button}
+      >
+        <Text>- 1</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -31,10 +31,18 @@ const style = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    backgroundColor: 'white',
+    padding: 20,
   },
   text: {
     textAlign: 'center',
     fontSize: 40,
     top: -15,
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10,
+    margin: 10,
   },
 });
