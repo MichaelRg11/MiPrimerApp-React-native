@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, StyleSheet, Text, Dimensions, useWindowDimensions } from 'react-native';
+import { View, StyleSheet, Text, useWindowDimensions } from 'react-native';
 
 // const { width, height } = Dimensions.get('window');
 
 export const Dimensiones = () => {
 
-  const { width, height } = useWindowDimensions()
+  const { width, height } = useWindowDimensions();
 
   return (
     <View>
