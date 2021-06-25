@@ -10,8 +10,8 @@ export const Dimensiones = () => {
   return (
     <View>
       <View style={styles.container}>
-        <View style={{ ...styles.cajaMorada, width: width * 0.2 }} />
         <View style={styles.cajaNaranja} />
+        <View style={{ ...styles.cajaMorada, width: width * 0.2 }} />
         <Text style={styles.text}>W: {width}, H: {height}</Text>
       </View>
     </View>
@@ -31,6 +31,9 @@ const styles = StyleSheet.create({
   },
   cajaNaranja: {
     backgroundColor: '#F0A23B',
+    width: '50%',
+    height: '50%',
+    position: 'absolute',
   },
   text: {
     fontSize: 20,
